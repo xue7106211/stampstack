@@ -1,0 +1,139 @@
+:root {
+  --ink: #2a2b32;
+  --muted: #9aa0ab;
+  --bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 24px 0;
+}
+
+/* ── Masthead ───────────────────────────────────────────── */
+.masthead {
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+}
+
+.masthead__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.masthead__titlerow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.masthead__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.masthead__version {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.masthead__gh {
+  color: var(--ink);
+  display: inline-flex;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.masthead__gh:hover {
+  opacity: 1;
+}
+
+.masthead__desc {
+  margin: 0 0 10px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.masthead__desc--muted {
+  color: var(--muted);
+}
+
+/* ── Stage / carousel ───────────────────────────────────── */
+.stage {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* renderStamp 内容：图片铺满邮票 + 底部名称标签 */
+.stamp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.stamp__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.stamp__label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.page__foot {
+  padding: 28px 0 36px;
+  font-size: 13px;
+  color: var(--muted);
+}
